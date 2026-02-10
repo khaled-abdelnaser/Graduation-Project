@@ -1,0 +1,44 @@
+.box {
+    border: 1px solid #ccc;
+    padding: 24px; /* Increased padding for a more "breathable" feel */
+    border-radius: 12px; /* Slightly rounder looks more modern */
+    background-color: #f9f9f9;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures all boxes in the row are the same height */
+}
+
+.box:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    border-color: #0177ed;
+    transform: translateY(-5px); /* Adds a nice "lift" effect */
+    background-color: white;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin: 5px 0 10px;
+    background-color: rgba(173, 216, 230, 0.438);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #0177ed;
+}
+
+.activity {
+    border: 1px solid #ccc;
+    padding: 24px; /* Increased padding for a more "breathable" feel */
+    border-radius: 12px; /* Slightly rounder looks more modern */
+    background-color: #f9f9f9;
+    height: 100%; /* Ensures all boxes in the row are the same height */
+}
+@media (max-width: 768px) {
+    .container {
+        padding-top: 40px;
+    }
+}

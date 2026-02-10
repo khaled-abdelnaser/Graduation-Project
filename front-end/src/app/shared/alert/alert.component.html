@@ -1,0 +1,9 @@
+<div *ngIf="visible" class="alert-box" [ngClass]="type">
+  <span class="icon">
+    {{ type === "error" ? "⚠️" : type === "success" ? "✅" : "ℹ️" }}
+  </span>
+
+  <span class="text">{{ message }}</span>
+
+  <button class="close-btn" (click)="close()">✕</button>
+</div>

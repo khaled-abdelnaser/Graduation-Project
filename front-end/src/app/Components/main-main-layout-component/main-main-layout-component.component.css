@@ -1,0 +1,15 @@
+.navbar {
+    display: none;
+}
+@media (max-width: 768px) {
+    .col-10 {
+        width: 100%;
+    }
+    .fa-bars {
+        padding: 10px;
+        font-size: 25px;
+    }
+    .navbar {
+        display: block;
+    }
+}

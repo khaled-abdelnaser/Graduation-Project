@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Soft Snackbar Styling - Calm and Clear Messages */
+.soft-snackbar {
+  background: #e8f1ff !important;
+  color: #1a3d7c !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+  direction: rtl !important;
+  text-align: center !important;
+  padding: 14px 24px !important;
+  margin-top: 120px !important;
+}
+
+.soft-snackbar button {
+  color: #1a3d7c !important;
+  margin-right: 12px !important;
+  font-weight: 600 !important;
+}
+
+/* Error Snackbar Styling (kept for compatibility) */
+.error-snackbar {
+  background: #d32f2f !important;
+  color: white !important;
+  font-weight: 500 !important;
+  direction: rtl !important;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
+.error-snackbar button {
+  color: white !important;
+  margin-right: 12px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

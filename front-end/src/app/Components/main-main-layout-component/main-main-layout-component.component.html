@@ -1,0 +1,13 @@
+<div class="navbar p-2 fixed-top" style="background-color: white;">
+    <i class="fa-solid fa-bars" (click)="openSidebar()"></i>
+</div>
+<div class="container-fluid" style="background: #f3f3f5;">
+    <div class="row">
+        <div class="col-2 p-0">
+            <app-sidebar [isOpen]="isOpen" (changeOpen)="this.isOpen=$event"></app-sidebar>
+        </div>
+        <div class="col-10 p-4 vh-100" style="overflow-y: auto;">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h2>Upload Chest X-ray</h2>
+            <p class="text-muted">Securely upload your X-ray for AI analysis</p>
+        </div>
+    </div>
+
+    <div class="row g-4 mt-2">
+
+        <div class="col-md-6 col-sm-12">
+            <div class="box first" style="border-style: dashed; border-width: 2px;" (click)="fileInput.click()">
+
+                <div class="preview-container" [class.has-image]="imagePreview">
+                    @if (imagePreview) {
+                        <img [src]="imagePreview" class="img-fluid big-img-rect">
+                    } @else {
+                        <div class="icon-circle">
+                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        </div>
+                    }
+                </div>
+
+                <p class="mt-3">{{ selectedFile ? selectedFile.name : 'Upload Chest X-ray' }}</p>
+                <p class="text-muted text-center">Drag and drop an image here, or click to browse</p>
+
+                <input type="file" #fileInput style="display: none" accept="image/*" (change)="onFileSelected($event)">
+
+                @if (selectedFile) {
+                    <button class="btn btn-primary mt-3 w-75 animate-fade-in" (click)="$event.stopPropagation(); uploadImage()">
+                        Analyze Image
+                    </button>
+                }
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <div class="box">
+                <div class="icon-circle gray-bg mb-3">
+                    <i class="fa-solid fa-microscope text-muted" style="font-size: 24px;"></i>
+                </div>
+                <p>Analysis Results</p>
+                <p class="text-muted text-center">Results will appear here after the AI processes your upload.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-5 col-sm-12 mt-4 box-tips">
+            <p class="fw-bold"><i class="fa-solid fa-lightbulb me-2"></i>Upload Guidelines</p>
+            <div class="tips">
+                <ul class="mb-0">
+                    <li>Ensure the X-ray is clear and well-lit</li>
+                    <li>Upload only chest X-rays</li>
+                    <li>Files are encrypted and secure</li>
+                    <li>A doctor will review all AI results</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

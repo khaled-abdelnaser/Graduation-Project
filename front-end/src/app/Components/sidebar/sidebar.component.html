@@ -1,0 +1,50 @@
+
+<div class="container vh-100" style="background-color: white;" [ngClass]="isOpen ? 'open' : 'closed'">
+    <div class="row">
+        <div style="border-bottom: 1px solid #80808086;">
+            <div class="title d-flex align-items-center p-3 ">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <div>
+                    <p style="margin:8px 0 -5px 0;">Health Portal</p>
+                    <p class="text-muted">Patient Access</p>
+                </div>
+                <i class="fa-solid fa-xmark" (click)="closeSideBar()"></i>
+            </div>
+        </div>
+        <div style="border-bottom: 1px solid #80808086;">
+            <div class="title d-flex align-items-center p-3">
+                <div class="name"><p>{{userName?.charAt(0)?.toUpperCase()}}</p></div>
+                <div>
+                    <p style="margin:8px 0 -2px 0;">{{userName}}</p>
+                    <p class="text-muted">Patient</p>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar menu mt-4" style="border-bottom: 1px solid #80808086;">
+            <div class="menu-item d-flex align-items-center p-3" routerLink="/MainPage/patient-dashboard" routerLinkActive="active-item" [routerLinkActiveOptions]="{ exact: true }">
+                <i class="fa-solid fa-house me-2"></i>
+                <span>Dashboard</span>
+            </div>
+            <div class="menu-item d-flex align-items-center p-3" routerLink="/MainPage/Symptom-Checker" routerLinkActive="active-item">
+                <i class="fa-solid fa-stethoscope me-2"></i>
+                <span>Symptom Checker</span>
+            </div>
+            <div class="menu-item d-flex align-items-center p-3" routerLinkActive="active-item" routerLink="/MainPage/Upload-X-ray">
+                <i class="fa-solid fa-arrow-up-from-bracket me-2"></i>
+                <span>Upload X-ray</span>
+            </div>
+        </div>
+            <div class="sidebar footer mt-auto p-3" style="border-bottom: 1px solid #80808086;">
+                <div class="menu-item d-flex align-items-center p-3">
+                    <i class="fa-solid fa-language me-2"></i>
+                    <span>العربية</span>
+                </div>
+            </div>
+            <div class="sidebar footer mt-auto p-3">
+                <div class="footer-item d-flex align-items-center p-3" routerLink="/login">
+                    <i class="fa-solid fa-right-from-bracket me-2 text-danger"></i>
+                    <span class="text-danger">Logout</span>
+                </div>
+            </div>
+    </div>
+</div>
